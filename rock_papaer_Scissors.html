@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="rock_papaer_Scissors.css" />
+    <title>Rock, paper, scissors</title>
+  </head>
+  <body>
+    <div class="main-div">
+      <div class="welcome-container">
+        <h1 class="welcome-title">Rock Paper Scissors</h1>
+        <button id="btn-start-game" class="button">
+          <span class="button-content">Start Game </span>
+        </button>
+      </div>
+      <div class="game-container hidden">
+        <div class="all-choises-box">
+          <div class="try-again-section">
+            <button id="resetGame" class="button">
+              <span class="button-content">Try Again</span>
+            </button>
+          </div>
+          <div class="result-choise-section">
+            <div class="result-choise">
+              <div>
+                <img class="robot-img" src="images/robot_630426.png" alt="" />
+                <span id="computer-choice"></span>
+              </div>
+
+              <div>
+                <img class="user-img" src="images/gamer.png" alt="" />
+                <span id="user-choice"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="choise-radios">
+          <div class="radios-field">
+            <div class="img-box">
+              <img
+                class="item-choise"
+                src="images/stone.png"
+                alt=""
+                data-move="rock"
+              />
+            </div>
+            <div class="img-box">
+              <img
+                class="item-choise"
+                src="images/hold.png"
+                alt=""
+                data-move="paper"
+              />
+            </div>
+            <div class="img-box">
+              <img
+                class="item-choise"
+                src="images/scissors.png"
+                alt=""
+                data-move="scissors"
+              />
+            </div>
+          </div>
+          <div>
+            <button id="play" disabled class="button">
+              <span class="button-content">Play</span>
+            </button>
+          </div>
+        </div>
+        <div class="score-box">
+          <div class="computer-box">
+            <h3>Computer Score:</h3>
+            <p id="computerScore">0</p>
+          </div>
+          <div class="user-box">
+            <h3>Your Score:</h3>
+            <p id="userScore">0</p>
+          </div>
+        </div>
+        <div class="result-container">
+          <h2>Result: <span id="result"></span></h2>
+        </div>
+      </div>
+    </div>
+    <script src="rock_papaer_Scissors.js"></script>
+  </body>
+</html>

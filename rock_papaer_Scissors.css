@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-div {
+    margin: 70px auto;
+    width: 600px;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media (max-width: 710px) {
+    .main-div {
+        width: 300px;
+        background-color: #8326e1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}
+.welcome-container,
+.game-container {   
+    width: 100%;
+    flex: 1;
+    padding: 20px 30px;
+    background-color: #8326e1;
+    border-radius: 6px;
+
+}
+
+.welcome-container  {
+    height: 422px;
+    margin-bottom: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.welcome-title {
+    color: white;
+}
+
+.button {
+    position: relative;
+    overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background: #3d3a4e;
+    background-size: 400%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .button-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+      82.3deg,
+      rgba(150, 93, 233, 1) 10.8%,
+      rgba(99, 88, 238, 1) 94.3%
+    );
+    transition: all 0.475s;
+  }
+
+.try-again-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.robot-img,
+.user-img {
+    width: 70px;
+}
+
+.result-choise {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media (max-width: 710px) {
+    
+     .result-choise {
+        margin: 10px auto;
+     }   
+}
+
+.computer-choice,
+.user-choice {
+    color: white;
+    font-weight: 500;
+}
+#computer-choice,
+#user-choice {
+    color: black;
+}
+
+
+
+
+
+.score-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px white solid;
+    border-radius: 6px;
+    color: white;
+    background-color: black;
+}
+
+.computer-box,
+.user-box {
+    border: 2px black solid;
+    padding: 20px;
+    margin: 10px auto;
+}
+#computerScore,
+#userScore {
+    color: red;
+    font-size: 40px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choise-radios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.item-choise {
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: 400;
+    color: black;
+}
+.radios-field {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+.radios-field .img-box {
+    background-color: rgba(240, 248, 255, 0.575);
+    border-radius:50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item-choise {
+    cursor: pointer;
+    width: 70px;
+    object-fit: cover;
+}
+.radios-field .img-box:hover {
+    background-color: rgba(240, 248, 255, 0.76);
+}
+.radios-field .fix-hover {
+    background-color: rgba(240, 248, 255, 0.76);
+}
+
+@media (max-width: 710px) {
+    .radios-field {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+        
+}
+.result-container {
+    background-color: black;
+    color: white;
+    font-weight: 200;
+    border: 3px white solid;
+    border-radius: 6px;
+    margin-top: 2px;
+}
+@media (max-width: 710px) {
+    .result-container {
+       width: 200px;
+    }
+        
+}
+
+/* .hidden {
+    display: none;
+} */
+
+@keyframes slideInLift {
+    from {
+        transform: translateX(300px);
+    } to {
+        transform: translateX(0);
+    }
+}
+.game-container {
+    animation: slideInLift 1s ease-in 1s both;
+    transform: translateX(-150);
+}
+
+.welcome-container {
+
+}

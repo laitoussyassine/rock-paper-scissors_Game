@@ -147,7 +147,7 @@ body {
 
 .computer-box,
 .user-box {
-  border: 2px black solid;
+  /* border: 2px black solid; */
   padding: 20px;
   margin: 10px auto;
 }

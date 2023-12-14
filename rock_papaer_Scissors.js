@@ -10,6 +10,8 @@ const startGameBtn = document.getElementById("btn-start-game");
 const welcomeContainer = document.querySelector(".welcome-container");
 const gameContainer = document.querySelector(".game-container");
 const resultChoise = document.querySelector(".user-choise");
+const robotChoice = document.querySelector('.computer-choice');
+const plyerChoice = document.querySelector('.player-choice');
 
 let score = {
   computerScore: 0,
@@ -47,6 +49,8 @@ resetGame.addEventListener("click", () => {
   userScore.textContent = 0;
   computerScore.textContent = 0;
   resultDisplay.textContent = "";
+  robotChoice.src = "";
+  plyerChoice.src = "";
   
 });
 
@@ -83,6 +87,6 @@ function showResult(userChoice, computerChoice) {
       score.computerScore = score.computerScore + 1;
       computerScore.textContent = score.computerScore;
     }
-    document.querySelector('.computer-choice').src = `images/${computerChoice}.png`;
-    document.querySelector('.player-choice').src = `images/${userChoice}.png`;
+    robotChoice.src = `images/${computerChoice}.png`;
+    plyerChoice.src = `images/${userChoice}.png`;
 }
